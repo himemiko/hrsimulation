@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+      $(function() {
+        var par = Number(getParam('cnt')),//パラメータ取得
+            par2 = Number(getParam('cnt2')),
+            winSize = $(window).width(),//ウィンドウサイズ取得
+            pos = $('.pct').position();//cssのabsolute値取得
+
+        if (winSize > 768) {//診断説明文表示//PC画面
+          if (par >= 0 && par < 186 && par2 > 276 && par2 <= 552) {//Atype.show
+            $('.diagA').show();
+            $('.diagB').hide();
+            $('.diagC').hide();
+            $('.diagD').hide();
+          }
+          if (par >= 0 && par < 186 && par2 >= 0 && par2 <= 276) {//Btype.show
+            $('.diagA').hide();
+            $('.diagB').show();
+            $('.diagC').hide();
+            $('.diagD').hide();
+          }
+          if (par >= 186 && par <= 372 && par2 >= 0 && par2 <= 276) {//Ctype.show
+            $('.diagA').hide();
+            $('.diagB').hide();
+            $('.diagC').show();
+            $('.diagD').hide();
+          }
+          if (par >= 186 && par <= 372 && par2 > 276 && par2 <= 552) {//Dtype.show
+            $('.diagA').hide();
+            $('.diagB').hide();
+            $('.diagC').hide();
+            $('.diagD').show();
+          }
+        } else if (winSize > 480) {//タブレット画面
+          if (par >= 0 && par < 156 && par2 > 204 && par2 <= 408) {//Atype.show
+            $('.diagA').show();
+            $('.diagB').hide();
+            $('.diagC').hide();
+            $('.diagD').hide();
+          }
+          if (par >= 0 && par < 156 && par2 >= 0 && par2 <= 204) {//Btype.show
+            $('.diagA').hide();
+            $('.diagB').show();
+            $('.diagC').hide();
+            $('.diagD').hide();
+          }
+          if (par >= 156 && par <= 312 && par2 >= 0 && par2 <= 204) {//Ctype.show
+            $('.diagA').hide();
+            $('.diagB').hide();
+            $('.diagC').show();
+            $('.diagD').hide();
+          }
+          if (par >= 156 && par <= 312 && par2 > 204 && par2 <= 408) {//Dtype.show
+            $('.diagA').hide();
+            $('.diagB').hide();
+            $('.diagC').hide();
+            $('.diagD').show();
+          }
+        } else {//スマホ画面
+          if (par >= 0 && par < 96 && par2 > 102 && par2 <= 204) {//Atype.show
+            $('.diagA').show();
+            $('.diagB').hide();
+            $('.diagC').hide();
+            $('.diagD').hide();
+          }
+          if (par >= 0 && par < 96 && par2 >= 0 && par2 <= 102) {//Btype.show
+            $('.diagA').hide();
+            $('.diagB').show();
+            $('.diagC').hide();
+            $('.diagD').hide();
+          }
+          if (par >= 96 && par <= 192 && par2 >= 0 && par2 <= 102) {//Ctype.show
+            $('.diagA').hide();
+            $('.diagB').hide();
+            $('.diagC').show();
+            $('.diagD').hide();
+          }
+          if (par >= 96 && par <= 192 && par2 > 102 && par2 <= 204) {//Dtype.show
+            $('.diagA').hide();
+            $('.diagB').hide();
+            $('.diagC').hide();
+            $('.diagD').show();
+          }
+        }
+
+        par += Number(pos.top);//ピクトさん計算位置をcssのabsolute値に加算
+        par2 += Number(pos.left);
+        $('.pct').css({'top':par+'px', 'left':par2+'px'});//css書き換え
+      });
+      function getParam(name, url) {//パラメータ値取得関数
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>あなたの診断結果はこちら</h2>
+      <div class="diag diagA">
+        <h3>あなたはAタイプです。</h3>
+        <div class="">上司や職場に満足し、存在感も感じているため、順調なキャリアを築けているでしょう。</div>
+      </div>
+
+      <div class="diag diagB">
+        <h3>あなたはBタイプです。</h3>
+        <div class="">上司や職場に満足しているが、新しく得るものがないと感じているため、上司に自分のキャリアについて相談しましょう。</div>
+      </div>
+
+      <div class="diag diagC">
+        <h3>あなたはCタイプです。</h3>
+        <div class="">上司や職場で存在感を感じているが、パフォーマンスを発揮できていないと感じているため、上司と自分の役割や目標について相談しましょう。</div>
+      </div>
+
+      <div class="diag diagD">
+        <h3>あなたはDタイプです。</h3>
+        <div class="">上司や職場とうまくいっていなく、パフォーマンスも発揮できず苦しんでいるかと思います。早急に上司と本音で話をしましょう。</div>
+      </div>
+
+      <div class="placeBox">
+          <div class="top">満足 高</div>
+          <div class="left">存在感 低</div>
+          <div class="img"><img class="graph" src="graph.png" alt="結果のグラフです"></div>
+          <div class="right">存在感 高</div>
+          <div class="bottom">満足 低</div>
+        <img class="pct" src="pictogram.png" alt="描画用のピクトさんです">
+      </div>
+
+      <h2 class="sech">組織でよく見られる３つのタイプ</h2>
+
+      <div class="explanation">
+        会社（部署）でサーベイをとってみると、組織の今の状態がわかります。
+        どのポジションに多くの人がいるかによってタイプがわかれ、
+        よくある状態が３つのタイプになります。
+      </div>
+
+      <div class="placeCenter">
+        <div class="top">満足 高</div>
+        <div class="left">存在感 低</div>
+        <div class="img">
+          <img class="graph" id="opac" src="graph.png" alt="解説用のグラフです">
+          <div class="type1">
+            <span>&#9312;満足度が高く<br>パフォーマンスが高い組織タイプ</span>
+          </div>
+          <div class="type2">
+            <span>&#9313;ぶら下がり従業員が<br>多い組織タイプ</span>
+          </div>
+          <div class="type3">
+            <span>&#9314;荒れ始め組織タイプ</span>
+          </div>
+        </div>
+        <div class="right">存在感 高</div>
+        <div class="bottom">満足 低</div>
+      </div>
+
+      <div class="explanation">
+        <h3>組織でよく見られる３つのタイプとは？</h3>
+        <div class="head">&#9312;　<span>満足度が高くパフォーマンスが高い組織タイプ</span></div>
+        <div class="equal">＝退職者も少なく、会社と従業員がWinWinの状態を築けている理想の満足型組織</div>
+
+        <div class="head">&#9313;　<span>ぶら下がり従業員が多い組織タイプ</span></div>
+        <div class="equal">＝大手企業や古いタイプの会社によくみられ、ここにいれば安心、潰れることはない、</div>
+        <div class="text">パフォーマンスを発揮しなくても給与や昇進に対して影響がないと思っている。</div>
+        <div class="text">ぶら下がり従業員の多い組織</div>
+
+        <div class="head">&#9314;　<span>荒れ始め組織タイプ</span></div>
+        <div class="equal">＝ビックリ退職が増え始め、会社と従業員がWinWinの状態を築けにくくなっている。</div>
+        <div class="text">荒れ始め型組織</div>
+      </div>
+
+      <div class="forPc">
+        <div class="leadSnt">
+          あなたの会社（部署）が何タイプになるかは、Motifyでより詳細に診断できます。<br>
+          Motifyでは、さらに深堀した3軸での結果（Motify理論）を見ることができます。
+        </div>
+      </div>
+      <div class="forTab">
+        <div class="leadSnt">
+          <div class="firSen">あなたの会社（部署）が何タイプになるかは、<br>Motifyでより詳細に診断できます。<br></div>
+          <div class="secSen">Motifyでは、さらに深堀した3軸での<br>結果（Motify理論）を見ることができます。</div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

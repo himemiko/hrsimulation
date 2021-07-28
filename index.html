@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1>MotifyHR　エンゲージメントサーベイ　簡易診断</h1>
+      <div class="intro">
+          エンゲージメントサーベイの簡易診断です。<br>
+          あまり考え込まずに直感で回答してください。<br>
+          回答内容が他者に公開されることはありません。
+          <div class="">所要時間＝1分</div>
+      </div>
+        <div class="wrap">
+          <div class="item">1. この1ヶ月、上司からよい仕事をしたと認められたり、褒められたりした</div>
+          <div class="verticle">
+            <input type="radio" name="firQ" value="4" id="firQ1">
+            <label for="firQ1" class="label">1</label>
+
+            <input type="radio" name="firQ" value="3" id="firQ2">
+            <label for="firQ2" class="label">2</label>
+
+            <input type="radio" name="firQ" value="2" id="firQ3" checked="checked">
+            <label for="firQ3" class="label">3</label>
+
+            <input type="radio" name="firQ" value="1" id="firQ4">
+            <label for="firQ4" class="label">4</label>
+
+            <input type="radio" name="firQ" value="0" id="firQ5">
+            <label for="firQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">2. 上司は、自分をひとりの人間として気にかけてくれているようだ</div>
+          <div class="verticle">
+            <input type="radio" name="secQ" value="4" id="secQ1">
+            <label for="secQ1" class="label">1</label>
+
+            <input type="radio" name="secQ" value="3" id="secQ2">
+            <label for="secQ2" class="label">2</label>
+
+            <input type="radio" name="secQ" value="2" id="secQ3" checked="checked">
+            <label for="secQ3" class="label">3</label>
+
+            <input type="radio" name="secQ" value="1" id="secQ4">
+            <label for="secQ4" class="label">4</label>
+
+            <input type="radio" name="secQ" value="0" id="secQ5">
+            <label for="secQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">3. あなたの仕事環境は清潔できちんとしている</div>
+          <div class="verticle">
+            <input type="radio" name="thiQ" value="4" id="thiQ1">
+            <label for="thiQ1" class="label">1</label>
+
+            <input type="radio" name="thiQ" value="3" id="thiQ2">
+            <label for="thiQ2" class="label">2</label>
+
+            <input type="radio" name="thiQ" value="2" id="thiQ3" checked="checked">
+            <label for="thiQ3" class="label">3</label>
+
+            <input type="radio" name="thiQ" value="1" id="thiQ4">
+            <label for="thiQ4" class="label">4</label>
+
+            <input type="radio" name="thiQ" value="0" id="thiQ5">
+            <label for="thiQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">4. あなたの仕事の成果を上げるためのツールは、十分に備わっている</div>
+          <div class="verticle">
+            <input type="radio" name="forQ" value="4" id="forQ1">
+            <label for="forQ1" class="label">1</label>
+
+            <input type="radio" name="forQ" value="3" id="forQ2">
+            <label for="forQ2" class="label">2</label>
+
+            <input type="radio" name="forQ" value="2" id="forQ3" checked="checked">
+            <label for="forQ3" class="label">3</label>
+
+            <input type="radio" name="forQ" value="1" id="forQ4">
+            <label for="forQ4" class="label">4</label>
+
+            <input type="radio" name="forQ" value="0" id="forQ5">
+            <label for="forQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">5. 会社には、現状を改革改善しようとする文化がある</div>
+          <div class="verticle">
+            <input type="radio" name="fifQ" value="4" id="fifQ1">
+            <label for="fifQ1" class="label">1</label>
+
+            <input type="radio" name="fifQ" value="3" id="fifQ2">
+            <label for="fifQ2" class="label">2</label>
+
+            <input type="radio" name="fifQ" value="2" id="fifQ3" checked="checked">
+            <label for="fifQ3" class="label">3</label>
+
+            <input type="radio" name="fifQ" value="1" id="fifQ4">
+            <label for="fifQ4" class="label">4</label>
+
+            <input type="radio" name="fifQ" value="0" id="fifQ5">
+            <label for="fifQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">6. 会社は、他社よりも新しいことを取り入れる会社風土であると感じる</div>
+          <div class="verticle">
+            <input type="radio" name="sixQ" value="4" id="sixQ1">
+            <label for="sixQ1" class="label">1</label>
+
+            <input type="radio" name="sixQ" value="3" id="sixQ2">
+            <label for="sixQ2" class="label">2</label>
+
+            <input type="radio" name="sixQ" value="2" id="sixQ3" checked="checked">
+            <label for="sixQ3" class="label">3</label>
+
+            <input type="radio" name="sixQ" value="1" id="sixQ4">
+            <label for="sixQ4" class="label">4</label>
+
+            <input type="radio" name="sixQ" value="0" id="sixQ5">
+            <label for="sixQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">7. チームの中でミスをすると、たいてい非難されることが多い</div>
+          <div class="horizontal">
+            <input type="radio" name="sevQ" value="4" id="sevQ1">
+            <label for="sevQ1" class="label">1</label>
+
+            <input type="radio" name="sevQ" value="3" id="sevQ2">
+            <label for="sevQ2" class="label">2</label>
+
+            <input type="radio" name="sevQ" value="2" id="sevQ3" checked="checked">
+            <label for="sevQ3" class="label">3</label>
+
+            <input type="radio" name="sevQ" value="1" id="sevQ4">
+            <label for="sevQ4" class="label">4</label>
+
+            <input type="radio" name="sevQ" value="0" id="sevQ5">
+            <label for="sevQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">8. チームメンバー間で、困難な課題を指摘し合うことができる</div>
+          <div class="horizontal">
+            <input type="radio" name="eigQ" value="0" id="eigQ1">
+            <label for="eigQ1" class="label">1</label>
+
+            <input type="radio" name="eigQ" value="1" id="eigQ2">
+            <label for="eigQ2" class="label">2</label>
+
+            <input type="radio" name="eigQ" value="2" id="eigQ3" checked="checked">
+            <label for="eigQ3" class="label">3</label>
+
+            <input type="radio" name="eigQ" value="3" id="eigQ4">
+            <label for="eigQ4" class="label">4</label>
+
+            <input type="radio" name="eigQ" value="4" id="eigQ5">
+            <label for="eigQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">9. 日々の仕事は、意義のあるものだと思う</div>
+          <div class="horizontal">
+            <input type="radio" name="ninQ" value="0" id="ninQ1">
+            <label for="ninQ1" class="label">1</label>
+
+            <input type="radio" name="ninQ" value="1" id="ninQ2">
+            <label for="ninQ2" class="label">2</label>
+
+            <input type="radio" name="ninQ" value="2" id="ninQ3" checked="checked">
+            <label for="ninQ3" class="label">3</label>
+
+            <input type="radio" name="ninQ" value="3" id="ninQ4">
+            <label for="ninQ4" class="label">4</label>
+
+            <input type="radio" name="ninQ" value="4" id="ninQ5">
+            <label for="ninQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">10. 仕事をすることで、日々の活力を得ている</div>
+          <div class="horizontal">
+            <input type="radio" name="tenQ" value="0" id="tenQ1">
+            <label for="tenQ1" class="label">1</label>
+
+            <input type="radio" name="tenQ" value="1" id="tenQ2">
+            <label for="tenQ2" class="label">2</label>
+
+            <input type="radio" name="tenQ" value="2" id="tenQ3" checked="checked">
+            <label for="tenQ3" class="label">3</label>
+
+            <input type="radio" name="tenQ" value="3" id="tenQ4">
+            <label for="tenQ4" class="label">4</label>
+
+            <input type="radio" name="tenQ" value="4" id="tenQ5">
+            <label for="tenQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">11. この6ヶ月、仕事について学び、成長する機会があった</div>
+          <div class="horizontal">
+            <input type="radio" name="eleQ" value="0" id="eleQ1">
+            <label for="eleQ1" class="label">1</label>
+
+            <input type="radio" name="eleQ" value="1" id="eleQ2">
+            <label for="eleQ2" class="label">2</label>
+
+            <input type="radio" name="eleQ" value="2" id="eleQ3" checked="checked">
+            <label for="eleQ3" class="label">3</label>
+
+            <input type="radio" name="eleQ" value="3" id="eleQ4">
+            <label for="eleQ4" class="label">4</label>
+
+            <input type="radio" name="eleQ" value="4" id="eleQ5">
+            <label for="eleQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="item">12. あなたは、チームの成果をより高めるためであれば、新しい仕事を引き受ける</div>
+          <div class="horizontal">
+            <input type="radio" name="tweQ" value="0" id="tweQ1">
+            <label for="tweQ1" class="label">1</label>
+
+            <input type="radio" name="tweQ" value="1" id="tweQ2">
+            <label for="tweQ2" class="label">2</label>
+
+            <input type="radio" name="tweQ" value="2" id="tweQ3" checked="checked">
+            <label for="tweQ3" class="label">3</label>
+
+            <input type="radio" name="tweQ" value="3" id="tweQ4">
+            <label for="tweQ4" class="label">4</label>
+
+            <input type="radio" name="tweQ" value="4" id="tweQ5">
+            <label for="tweQ5" class="label">5</label><br>
+
+            <div class="lftLvl">全くそう思わない</div>
+            <div class="rgtLvl">非常にそう思う</div>
+          </div>
+        </div>
+
+      <a class="btn">診断する<i class="fas fa-arrow-right"></i></a>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
